@@ -54,26 +54,48 @@ class BinarySearchTree {
 
 
   preOrderTraversal(currentNode = this.root) {
+    if(!currentNode){
+      return;
+    }
+
+    console.log(currentNode.val);
+
+    this.preOrderTraversal(currentNode.left);
+    this.preOrderTraversal(currentNode.right);
 
   }
 
 
   inOrderTraversal(currentNode = this.root) {
+    if(!currentNode){
+      return;
+    }
 
+    this.inOrderTraversal(currentNode.left);
+    console.log(currentNode.val);
+    this.inOrderTraversal(currentNode.right);
   }
 
 
   postOrderTraversal(currentNode = this.root) {
+    if(!currentNode){
+      return;
+    }
 
+    this.postOrderTraversal(currentNode.left);
+    this.postOrderTraversal(currentNode.right);
+    console.log(currentNode.val);
   }
 
-    // Breadth First Traversal - Iterative
+  // Breadth First Traversal - Iterative
   breadthFirstTraversal() {
 
   }
 
   // Depth First Traversal - Iterative
   depthFirstTraversal() {
+
+  }
 
 }
 
